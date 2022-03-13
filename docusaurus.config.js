@@ -15,7 +15,9 @@ const config = {
   favicon: 'img/favicon.ico',
   organizationName: 'juanretamales', // Usually your GitHub org/user name.
   projectName: 'my-website', // Usually your repo name.
+
   trailingSlash: false,
+  deploymentBranch: 'gh-pages',
   i18n: {
     defaultLocale: 'es',
     locales: ['es', 'en'],
