@@ -8,13 +8,14 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Juan Retamales Site',
   tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  url: 'https://juanretamales.github.io',
+  baseUrl: '/my-website/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'juanretamales', // Usually your GitHub org/user name.
-  projectName: 'site', // Usually your repo name.
+  projectName: 'my-website', // Usually your repo name.
+  trailingSlash: false,
   i18n: {
     defaultLocale: 'es',
     locales: ['es', 'en'],
