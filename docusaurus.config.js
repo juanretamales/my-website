@@ -1,5 +1,7 @@
 // @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
+// Note: type annotations allow type checking and IDEs autocompletio
+//command: cmd /C "set "GIT_USER=juanretamales" && yarn deploy"
+// for debug: npx docusaurus start
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
@@ -7,7 +9,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Juan Retamales Site',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'Mi Web y Portafoleo Profesional',
   url: 'https://juanretamales.github.io',
   baseUrl: '/my-website/',
   onBrokenLinks: 'throw',
@@ -31,13 +33,13 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/juanretamales/my-website/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/juanretamales/my-website/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -60,14 +62,24 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Portafoleo',
+            label: 'Tutoriales',
+          },
+          {
+            // type: 'doc',
+            // docId: 'intro',
+            to: '/proyects/Intro', 
+            position: 'left',
+            label: 'Proyectos',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/juanretamales/docusaurus',
+            href: 'https://github.com/juanretamales/',
             label: 'GitHub',
             position: 'right',
           },
+          // {
+          //   type: 'localeDropdown',
+          // },
         ],
       },
       footer: {
@@ -83,24 +95,20 @@ const config = {
             ],
           },
           {
-            title: 'Community',
+            title: 'Redes Sociales',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Linkedin',
+                href: 'https://www.linkedin.com/in/juanretamales/',
               },
               {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://discord.com/users/1695',
               },
             ],
           },
           {
-            title: 'More',
+            title: 'Mas',
             items: [
               {
                 label: 'Blog',
@@ -108,7 +116,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/juanretamales',
               },
             ],
           },
@@ -120,7 +128,17 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
-    plugins: ['docusaurus-plugin-sass'],
+    plugins: ['docusaurus-plugin-sass',
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'Portafoleo',
+        path: 'proyects',
+        routeBasePath: 'proyects',
+        sidebarPath: require.resolve('./sidebars.js'),
+      }, 
+    ],
+  ],
 };
 
 module.exports = config;
