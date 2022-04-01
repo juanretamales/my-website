@@ -10,8 +10,10 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Juan Retamales Site',
   tagline: 'Mi Web y Portafoleo Profesional',
-  url: 'https://juanretamales.github.io',
-  baseUrl: '/my-website/',
+  // url: 'https://juanretamales.github.io',
+  url: 'https://www.juanretamales.cl',
+  // baseUrl: '/my-website/',
+  baseUrl: '',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
