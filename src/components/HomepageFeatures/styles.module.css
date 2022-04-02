@@ -11,5 +11,6 @@
 }
 .hero--primary{
   background-color: black;
-  background-image: url('https://www.juanretamales.cl/img/background.jpg');
+  /* background-image: url('https://www.juanretamales.cl/img/background.jpg'); */
+  background-image: url('localhost:3000/img/background.jpg');
 }
