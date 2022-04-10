@@ -13,7 +13,7 @@ const config = {
   // url: 'https://juanretamales.github.io',
   url: 'https://www.juanretamales.cl',
   // baseUrl: '/my-website/',
-  baseUrl: '',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',

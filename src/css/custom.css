@@ -38,8 +38,28 @@
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.hero--primary{
-  background-color: black;
-  background-image: url('https://www.juanretamales.cl/img/background.jpg');
-  /* background-image: url('localhost:3000/img/background.jpg'); */
+.hero--primary {
+	background: linear-gradient(-45deg, #18c3ff, #1790a8, #2379d5, #19599d);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	/* height: 100vh; */
+}
+
+.hero--primary .container{
+  background-image: url('https://www.juanretamales.cl/img/background.png');
+  background-size: 100% auto;
+  background-position: center;
+  /* background-image: url('localhost:3000/img/background.png'); */
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
