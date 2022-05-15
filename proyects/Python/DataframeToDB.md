@@ -4,12 +4,20 @@ Plataforma: -
 
 Tipo: Proyecto Abierto
 
+Fechas: 2020-2021
+
 Enlace: https://github.com/juanretamales/DataframeToDB
 
 ## Detalles
 
-![dataframetodb](/img/otros/dataframetodb.png)
+<!-- ![dataframetodb](/img/otros/dataframetodb.png) -->
 
+```mermaid
+flowchart LR;
+    A[Pandas DataFrame]-->B[Dataframetodb];
+    B-->C[SQLAlchemy];
+    C-->D[(DB)];
+```
 
 Para instalarlo tu puedes copiar la carpeta de dataframetodb en proyecto, o usar
 ```python

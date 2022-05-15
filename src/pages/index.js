@@ -12,7 +12,7 @@ function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   const ReactAvatar = require('@site/static/img/avatar2.svg').default;
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header id="matrix" className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
@@ -26,6 +26,8 @@ function HomepageHeader() {
              <p className="button button--secondary button--lg"> Ver Portafoleo</p>
           </Link>
         </div>
+        {/* <canvas id="background-avatar"></canvas> */}
+        {/* https://codepen.io/foxdk/pen/vYpyOqy */}
       </div>
     </header>
   );

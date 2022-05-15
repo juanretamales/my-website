@@ -11,7 +11,7 @@ const config = {
   title: 'Juan Retamales Site',
   tagline: 'Mi Web y Portafoleo Profesional',
   // url: 'https://juanretamales.github.io',
-  url: 'https://www.juanretamales.cl',
+  url: 'https://www.juanretamales.cl' ,
   // baseUrl: '/my-website/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -33,15 +33,16 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          remarkPlugins: [require('mdx-mermaid')],
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl: 'https://github.com/juanretamales/my-website/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
+          remarkPlugins: [require('mdx-mermaid')],
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/juanretamales/my-website/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/juanretamales/my-website/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -78,6 +79,12 @@ const config = {
             href: 'https://github.com/juanretamales/',
             label: 'GitHub',
             position: 'right',
+          },
+          {
+            docId: 'curriculum',
+            to: '/curriculum',
+            position: 'left',
+            label: 'Curriculum',
           },
           // {
           //   type: 'localeDropdown',
@@ -135,12 +142,17 @@ const config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'Portafoleo',
+        remarkPlugins: [require('mdx-mermaid')],
         path: 'proyects',
         routeBasePath: 'proyects',
         sidebarPath: require.resolve('./sidebars.js'),
       }, 
+
     ],
   ],
+  stylesheets: [
+    "https://fonts.googleapis.com/icon?family=Material+Icons",
+  ]
 };
 
 module.exports = config;
