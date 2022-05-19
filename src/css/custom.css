@@ -38,6 +38,12 @@
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300&family=Poppins:wght@100&display=swap');
+body{
+  /* font-family: roboto; */
+  font-family: 'Akshar', sans-serif;
+}
+
 .hero--primary {
 	background: linear-gradient(-45deg, #18c3ff, #1790a8, #2379d5, #19599d);
 	background-size: 400% 400%;
@@ -74,4 +80,94 @@
 	100% {
 		background-position: 0% 50%;
 	}
+}
+
+.main-wrapper{
+  margin-top: 10px;
+}
+/** Circle Icon **/
+.circle{
+  border-radius: 50%;
+  display: inline-block;
+  /* padding: 2px; */
+}
+/** Theme **/
+[data-theme='light'] .circle{
+  color: white;
+  background-color: #000;
+}
+[data-theme='dark'] .circle{
+  background-color: white;
+  color: black;
+}
+
+.circle span{
+  margin: 5px 6px 0 6px;
+}
+
+#skills > .row{
+  margin-top: 2px ;
+}
+#skills label{
+  align-content: center;
+  /* width: 100%;; */
+  text-align: center;
+}
+/** Theme **/
+/* [data-theme='light'] #skills label{
+  color: white;
+  background-color: #000;
+}
+[data-theme='dark'] #skills label{
+  background-color: white;
+  color: black;
+} */
+
+[data-theme='light'] #skills span{
+  color: white;
+  background-color: #000;
+}
+[data-theme='dark'] #skills span{
+  background-color: white;
+  color: black;
+}
+
+
+.title{
+  text-align: center;
+  font-size: 24px;
+}
+.subtitle{
+  text-align: center;
+  font-size: 20px;
+}
+.subtitle span{
+  font-style: italic;
+  font-size: 16px;
+  /* margin: 0px 5px 2px 15px; */
+  /* float: right; */
+}
+.sidebar{
+  background: #1616;
+}
+
+#skills > div{
+  /* border: 0px solid black; */
+  border: 1px 0px solid black;
+  /* border-bottom: 1px solid black; */
+  border-top: 1px solid black;
+}
+[data-theme='dark'] #skills > div{
+  /* border: 0px solid black; */
+  border: 1px 0px solid white;
+  /* border-bottom: 1px solid black; */
+  border-top: 1px solid white;
+}
+[data-theme='light'] #education label{
+  color: white;
+  background-color: #000;
+}
+[data-theme='dark'] #education label{
+  background-color: white;
+  color: black;
 }

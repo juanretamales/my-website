@@ -35,7 +35,7 @@ function AvatarUser(){
     <div class="avatar avatar--vertical">
       <img
         class="avatar__photo avatar__photo--xl"
-        src="https://picsum.photos/200/200" />
+        src="https://picsum.photos/400/400" />
       <div class="avatar__intro">
         <div class="avatar__name">Juan Pablo Retamales Lepe</div>
         <small class="avatar__subtitle">
@@ -46,8 +46,12 @@ function AvatarUser(){
   )
 }
 
+function AddCircleIcon(iconName){
+  return (<div className='circle light'><Icon>{iconName}</Icon></div>);
+}
+
 function Experiencias(){
-  const {experiences} = [
+  const experiences = [
       {
         role: 'Analista de datos y desarrollador de aplicaciones',
         time: '2021-2022',
@@ -73,7 +77,71 @@ function Experiencias(){
             También se colaboro en el proceso de creación de modelos predictivos para el turismo en la región de Atacama."
       }
     ]
-  return (<div><Icon>work</Icon></div>)
+  return (
+    <div class="container" id='skills'>
+      {experiences.map((experiences,index)=>{
+
+      return (
+          <div class="row">
+            <div class="container">
+              <div class="row subtitle">
+                <label class="col col--9 ">{experiences.role} </label>
+                <span class="col col--3">{experiences.company} ({experiences.time})</span>
+              </div>
+              
+              <div class="row">{experiences.details}</div>
+            </div>
+          </div>
+        )
+
+      })}
+    </div>
+  )
+}
+
+function Educacion(){
+  const education = [
+      {
+        degree: 'Ingeniero Civil en Informática',
+        university: 'Universidad de Santiago de Chile',
+        time: '2016-2019',
+        details: "Titulado en ingeniería civil en informática, con experiencia en proyectos \
+                  de alta envergadura de asignaturas electivas de redes neuronales, \
+                  computación de alto rendimiento, y dirección y gestión de empresas."
+      },
+      {
+        degree: 'Ingeniero en Informática',
+        university: 'Instituto Profesional Duoc UC',
+        time: '2012-2014',
+        details: "Titulado en ingeniería en informática de la escuela de informática y \
+                  telecomunicaciones, miembro activo en ese periodo del Centro de \
+                  Innovación de Transferencia Tecnológica y del taller de RFID."
+      }
+    ]
+  return (
+    <div class="container" id='education'>
+      {education.map((education,index)=>{
+
+      return (
+          <div class="row">
+            <div class="container">
+              <div class="row subtitle">
+                <label class="col ">{education.degree} </label>
+              </div>
+
+              <div class="row">
+                <span class="col col--8 ">{education.university} </span>
+                <span class="col col--4"> ({education.time})</span>
+              </div>
+              
+              <div class="row">{education.details}</div>
+            </div>
+          </div>
+        )
+
+      })}
+    </div>
+  )
 }
 
 function CurriculumOnline(){
@@ -81,11 +149,16 @@ function CurriculumOnline(){
   return (
     <div class="container">
       <div class="row">
-        <div class="col col--6">
+        <div class="col col--8">
           <div class="row">
             <div class="container">
               <div class="row">
-                Perfil Profesional
+                <div class="col col--2">
+                  {AddCircleIcon('personicon')}
+                </div>
+                <div class="col col--6 title">
+                  Perfil Profesional
+                </div>
               </div>
               <div class="row">
                 Líder de proyectos informáticos, titulado en ingeniería civil en informática en USACH e 
@@ -94,14 +167,26 @@ function CurriculumOnline(){
                 Experiencia extrayendo información y automatizando tareas, ademas de crear reportes 
                 en Power Bi.
               </div>
+              <div class="row">
+                <div class="col col--2">
+                  {AddCircleIcon('work')}
+                </div>
+                <div class="col col--6 title">
+                  Experiencia
+                </div>
+              </div>
+              <div class="row">
+                <Experiencias />
+              </div>
             </div>
           </div>
           <div class="row">
-            <Experiencias />
+            
           </div>
         </div>
-        <div class="col col--4">
+        <div class="col col--4 sidebar">
           <AvatarUser />
+          <Educacion />
         </div>
       </div>
       {/* <a href={siteConfig.url+"/proyects/Intro"}>Para mas informacion ir a proyectos.</a>
