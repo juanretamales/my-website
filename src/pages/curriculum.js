@@ -15,6 +15,7 @@ import LinkedinIcon from '@site/static/svg/linkedin.svg'
 import mailIcon from '@site/static/svg/mail.svg'
 import phoneIcon from '@site/static/svg/phone.svg'
 import { FaGithubAlt, FaLinkedinIn, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
+import {BsReception4, BsServer, BsSun } from 'react-icons/bs';
 
 
 function HomepageHeader() {
@@ -61,6 +62,7 @@ function AddCircleIcon(iconName){
 function Experiencias(){
   const experiences = [
       {
+        icon: <BsSun />,
         role: 'Analista de datos y desarrollador de aplicaciones',
         time: '2021-2022',
         company: 'SUNAI spa',
@@ -71,15 +73,18 @@ function Experiencias(){
           Jira y el sistema de versionamiento de archivos Git y Sublime Merge para trabajar con Gitlab"
       },
       {
-        role: 'Extracción de datos e importación a bases de datos',
+        icon: <BsServer />,
+        role: 'ETL y generación de reportes',
         time: '2021-2022',
         company: 'Freelance',
-        details: "Experiencia en el desarrollo de automatizaciones y extracción de datos (Scraping) en Python  \
-          para el portal de Lukas Lok Spa, para la generación de reportes para los diversos clientes. \
-          Ademas de la automatizacion de descarga de reportes de distintos sitios bancarios y de delivery para realizar cuadraturas de caja. \
+        details: "Experiencia en el desarrollo de automatizaciones, ETL y creación de reportes en Python en Excel y Outlock(correo).  \
+          Algunos de los proyectos destacados son la creación de una automatización para la creación de reportes en Excel y Outlock desde distintas bases de datos. \
+          Un ETL con scrapper del portal de Lukas Lok Spa, destinado a la generación de reportes para los diversos clientes de estos. \
+          La automatizacion de descarga de reportes de distintos sitios bancarios y de delivery para realizar cuadraturas de caja. \
           Tambien de la publicacion de la biblioteca 'DataframeToDB' en el repositorio oficial de python pypi, el cual ayuda en la exportacion de datos a bases de datos relacionales. "
       },
       {
+        icon: <BsReception4 />,
         role: 'Analista de datos y Desarrollador de aplicaciones',
         time: '2020',
         company: 'SoluData Spa',
@@ -96,10 +101,11 @@ function Experiencias(){
           <div class="row">
             <div class="container">
               <div class="row subtitle">
-                <label class="col col--9 ">{experiences.role} </label>
-                <span class="col col--3">{experiences.company} ({experiences.time})</span>
+                {/* <div class="col col--2 ">{experiences.icon}<div/> */}
+                
+                <label class="col col--8 "> {experiences.role} </label>
+                <span class="col col--4">{experiences.icon} {experiences.company} ({experiences.time})</span>
               </div>
-              
               <div class="row">{experiences.details}</div>
             </div>
           </div>
