@@ -132,6 +132,18 @@ body{
   color: black;
 }
 
+.center{
+  text-align: center;
+}
+.no-decoration{
+  text-decoration: none;
+}
+.no-margin{
+  margin: 0;
+}
+.no-padding{
+  padding: 0;
+}
 
 .title{
   text-align: center;
@@ -171,3 +183,159 @@ body{
   background-color: white;
   color: black;
 }
+
+/* #education .row > .col--4{
+  font-size: 12px;
+} */
+
+#Lenguages .MuiIcon-root{
+  color: black;
+  width: 40px;
+  height: 40px;
+}
+
+#contact {
+  text-decoration: none;
+  color: white;
+}
+#contact a {
+  width: 100%;
+}
+[data-theme='dark'] #education label{
+  /* background-color: white; */
+  color: black;
+}
+#contact svg{
+  padding: 20px;
+  /* background-color: #000; */
+  color:white;
+  background: black;
+  padding: 7px;
+  width: 2em;
+  height: 2em;
+  /* margin-right: 10px; */
+  border-radius: 10px;
+}
+[data-theme='dark'] #contact svg{
+  color:black;
+  background: white;
+}
+#contact label{
+  text-decoration: None;
+  color: black
+}
+[data-theme='dark'] #contact label{
+  color:white;
+}
+@media print{
+  .title{
+    text-align: center;
+    font-size: 16px;
+  }
+  .subtitle{
+    text-align: center;
+    font-size: 14px;
+  }
+  .subtitle span{
+    font-style: italic;
+    font-size: 12px;
+    /* margin: 0px 5px 2px 15px; */
+    /* float: right; */
+  }
+  .no-print{
+    display: none;
+  }
+  #__docusaurus{
+    /* width: 100%;
+    padding: 0px;*/
+    height: 100%;
+    --ifm-col-width: 100%;
+    font-size: 14px;
+    margin:0px;
+    margin: 0px;
+    padding: 50px 50px;
+    height: calc(100%-100px);
+    width: calc(100%-100px);
+  }
+  .col {
+    --ifm-col-width: 100%;
+  }
+  .col--12 {
+    --ifm-col-width: calc(12 / 12 * 100%);
+  }
+  .col--11 {
+    --ifm-col-width: calc(11 / 12 * 100%);
+  }
+  .col--10 {
+    --ifm-col-width: calc(10 / 12 * 100%);
+  }
+  .col--9 {
+    --ifm-col-width: calc(9 / 12 * 100%);
+  }
+  .col--8 {
+    --ifm-col-width: calc(8 / 12 * 100%);
+  }
+  .col--7 {
+    --ifm-col-width: calc(74 / 12 * 100%);
+  }
+  .col--6 {
+    --ifm-col-width: calc(6 / 12 * 100%);
+  }
+  .col--5 {
+    --ifm-col-width: calc(5 / 12 * 100%);
+  }
+  .col--4 {
+    --ifm-col-width: calc(4 / 12 * 100%);
+  }
+  .col--3 {
+    --ifm-col-width: calc(3 / 12 * 100%);
+  }
+  .col--2 {
+    --ifm-col-width: calc(2 / 12 * 100%);
+  }
+  .col--1 {
+    --ifm-col-width: calc(1 / 12 * 100%);
+  }
+  #__docusaurus nav, #__docusaurus footer{
+    display: none;
+  }
+  .main-wrapper, .main-wrapper main, .main-wrapper main > .container{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+  }
+  .main-wrapper main > .container > .row{
+    /* width: calc(100%-100px); */
+    width: 100%;
+    margin: 0px;
+    /* padding: 50px 50px; */
+    padding: 0px;
+    /* height: calc(100%-100px); */
+    height: 100%;
+  }
+  main > .container > .row > .col--4{
+    height: 100%;
+  }
+  #education .time{
+    font-size: 12px;
+    padding: 0px;
+  }
+  #education .details{
+    margin: 0 1px;
+  }
+}
+
+@media print and (orientation: portrait) {
+  /* Reglas para imprimir en formato vertical */
+  .no-print{
+    display: none;
+  }
+}
+  
+@media print and (orientation: landscape) {
+  /* Reglas para imprimir en formato apaisado */
+  .no-print{
+    display: none;
+  }
+}   

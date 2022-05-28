@@ -3,11 +3,19 @@ import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import { SvgIcon, makeStyles } from '@material-ui/core';
 import styles from './index.module.css';
 // import HomepageFeatures from '@site/src/components/HomepageFeatures';
 // import Avatar from '../../static/img/avatar.svg';
 // import {ReactComponent as ReactAvatar}  from '@site/static/img/avatar.svg';
 import Icon from "@material-ui/core/Icon";
+// import { ReactComponent as GithubIcon } from '@site/static/svg/github1.svg'
+import GithubIcon from '@site/static/svg/github1.svg'
+import LinkedinIcon from '@site/static/svg/linkedin.svg'
+import mailIcon from '@site/static/svg/mail.svg'
+import phoneIcon from '@site/static/svg/phone.svg'
+import { FaGithubAlt, FaLinkedinIn, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
+
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -124,21 +132,90 @@ function Educacion(){
 
       return (
           <div class="row">
-            <div class="container">
+            <div class="container no-padding">
               <div class="row subtitle">
                 <label class="col ">{education.degree} </label>
               </div>
 
               <div class="row">
-                <span class="col col--8 ">{education.university} </span>
-                <span class="col col--4"> ({education.time})</span>
+                <span class="col col--8 university">{education.university} </span>
+                <span class="col col--4 time"> ({education.time})</span>
               </div>
               
-              <div class="row">{education.details}</div>
+              <div class="row details">{education.details}</div>
             </div>
           </div>
         )
 
+      })}
+    </div>
+  )
+}
+
+function Languages(){
+  const lenguajes = [
+      {
+        idiom: 'Español',
+        level: 'Nativo'
+      },
+      {
+        idiom: 'Ingles',
+        level: 'Medio y en formación'
+      },
+    ]
+  return (
+    <div class="container" id='Lenguages'>
+      {lenguajes.map((lenguajes,index)=>{
+
+      return (
+              <div class="row">
+                <span class="col col--6 center">{lenguajes.idiom} </span>
+                <span class="col col--6 center"> ({lenguajes.level})</span>
+              </div>
+        )
+      })}
+    </div>
+  )
+}
+
+function HyperLinks(){
+  const Links = [
+      {
+        icon: <FaEnvelope />,
+        label: 'jua.retamales@gmail.com',
+        link: 'mailto:jua.retamales@gmail.com'
+      },
+      {
+        icon: <FaPhoneAlt />,
+        label: '+56 951 170 428',
+        link: 'tel:+56 951 170 428'
+      },
+      {
+        icon: <FaLinkedinIn />,
+        label: 'juanretamales',
+        link: 'https://linkedin.com/in/juanretamales'
+      },
+      {
+        icon: <FaGithubAlt />,
+        label: 'juanretamales',
+        link: 'http://github.com/juanretamales'
+      },
+    ]
+  return (
+    <div class="container" id='contact'>
+      {Links.map((Links,index)=>{
+
+      return (
+              <div class="row">
+                <a class='row' href={Links.link}>
+                  
+                {/* <Icon fontSize='large'>{Links.icon}</Icon><label>{Links.label}</label> */}
+                <div class='col col--2'>{Links.icon}</div>
+                <label class='col col--10'>{Links.label}</label>
+                
+                </a>
+              </div>
+        )
       })}
     </div>
   )
@@ -186,7 +263,9 @@ function CurriculumOnline(){
         </div>
         <div class="col col--4 sidebar">
           <AvatarUser />
+          <HyperLinks />
           <Educacion />
+          <Languages />
         </div>
       </div>
       {/* <a href={siteConfig.url+"/proyects/Intro"}>Para mas informacion ir a proyectos.</a>

@@ -101,6 +101,10 @@ const config = {
                 label: 'Portafoleo',
                 to: '/docs/intro',
               },
+              {
+                label: 'Curriculum',
+                to: '/curriculum'
+              }
             ],
           },
           {
