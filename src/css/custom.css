@@ -38,10 +38,11 @@
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300&family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300;400;500;600;700&display=swap');
 body{
   /* font-family: roboto; */
-  font-family: 'Akshar', sans-serif;
+  /* font-family: 'Akshar',sans-serif; */
+  font-family: 'Akshar Regular 400',sans-serif;
 }
 
 .hero--primary {
@@ -228,20 +229,7 @@ body{
   color:white;
 }
 @media print{
-  .title{
-    text-align: center;
-    font-size: 16px;
-  }
-  .subtitle{
-    text-align: center;
-    font-size: 14px;
-  }
-  .subtitle span{
-    font-style: italic;
-    font-size: 12px;
-    /* margin: 0px 5px 2px 15px; */
-    /* float: right; */
-  }
+  
   .no-print{
     display: none;
   }
@@ -256,6 +244,27 @@ body{
     padding: 50px 50px;
     height: calc(100%-100px);
     width: calc(100%-100px);
+  }
+  .title{
+    text-align: center;
+    font-size: 16px;
+  }
+  .subtitle{
+    text-align: center;
+    font-size: 14px;
+  }
+  .subtitle span{
+    font-style: italic;
+    font-size: 12px;
+    /* margin: 0px 5px 2px 15px; */
+    /* float: right; */
+  }
+  
+  .perfilprofesional{
+    font-size: 16px;
+    text-align: center;
+    font-family: 'Akshar Medium 500';
+    margin: 25px 0px;
   }
   .col {
     --ifm-col-width: 100%;

@@ -64,8 +64,11 @@ function Experiencias(){
         role: 'Analista de datos y desarrollador de aplicaciones',
         time: '2021-2022',
         company: 'SUNAI spa',
-        details: "Experiencia trabajando con la obtención de datos desde múltiples API, así como también conocimientos básicos de los servicios AWS de Amazon. \
-          además, de crear automatizaciones con Python y gestionados con Jenkins."
+        details: "Experiencia trabajando con la obtención de datos desde múltiples fuentes de datos, principalmente APIs y archivos CSV a travez de ETL \
+          personalizado escrito en Python, así como también conocimientos básicos de los servicios AWS de Amazon. \
+          Además, de crear automatizaciones con Python y gestionarlas con el controlador de tareas automaticas con Jenkins. \
+          Finalmente, experiencia en metodologia SCRUM-Kanban en un marco colaborativo de trabajo remoto con la plataforma \
+          Jira y el sistema de versionamiento de archivos Git y Sublime Merge para trabajar con Gitlab"
       },
       {
         role: 'Extracción de datos e importación a bases de datos',
@@ -237,12 +240,12 @@ function CurriculumOnline(){
                   Perfil Profesional
                 </div>
               </div>
-              <div class="row">
+              <div class="row perfilprofesional">
                 Líder de proyectos informáticos, titulado en ingeniería civil en informática en USACH e 
                 ingeniería en informática de Duoc UC, con experiencia en el diseño, construcción e 
                 implementación de soluciones e-business y e-comerce con tecnología de la información. 
-                Experiencia extrayendo información y automatizando tareas, ademas de crear reportes 
-                en Power Bi.
+                Con amplia experiencia de ETL y automatización de tareas asi como tambien la generación de reportes 
+                en Power Bi, Outlock (correo) y Excel.
               </div>
               <div class="row">
                 <div class="col col--2">
