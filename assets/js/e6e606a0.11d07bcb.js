@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[707],{8384:function(e){e.exports=JSON.parse('{"label":"PEP20","permalink":"/blog/tags/pep-20","allTagsPath":"/blog/tags","count":1}')}}]);

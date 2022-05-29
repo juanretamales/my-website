@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[535],{5641:function(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"PEP20 - Zen de Python","permalink":"/blog/PEP20"},{"title":"Welcome","permalink":"/blog/welcome"}]}')}}]);
